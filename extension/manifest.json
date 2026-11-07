@@ -1,0 +1,12 @@
+{
+	"manifest_version": 3,
+	"name": "Starteammate remote-debugging",
+	"version": "1.0.0",
+	"description": "Lets Starteammate Desktop work in your own browser tabs without Chrome's remote debugging prompt. Talks only to 127.0.0.1.",
+	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxLtX/QSymwHCzIF5AlFchtbLyBpA9SH5MumcirTKnEJm+/NGwYww4gU2XkJduaX/BIeFqih+NptcwX7CLJ/CxIV80CvfejoWNRMlPEQfLddiKqqogkek6xn1TjT6mpQlbHB1l7w+ikZ1NN20WBsa7wwb8lZXPSudMnQe3/6s8z00imgZ7HkswTeN2/1EQfOGbSvxXRdkY1QEHJ5GtxP6sPpi8H8i9xrAlXu9ZX4IJSg7eOye/wKTSb23qJy8B8WXt5wxytKmtk2wWXmTqBbBEMNIRF/ey7P+cRvN1htzWkk7OK63pwlnYb+5oOAUZlb9Gak4WVjVk9w9oX78PakuXQIDAQAB",
+	"minimum_chrome_version": "125",
+	"background": { "service_worker": "background.js" },
+	"permissions": ["debugger", "tabs", "alarms", "storage"],
+	"action": { "default_title": "Starteammate remote-debugging", "default_popup": "popup.html", "default_icon": { "16": "icon16.png", "32": "icon32.png" } },
+	"icons": { "16": "icon16.png", "32": "icon32.png", "48": "icon48.png", "128": "icon128.png" }
+}

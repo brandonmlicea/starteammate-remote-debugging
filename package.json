@@ -1,0 +1,13 @@
+{
+	"name": "starteammate-remote-debugging",
+	"version": "1.0.0",
+	"description": "A Chromium extension and a local relay that let Starteammate Desktop work in your own browser tabs over CDP through chrome.debugger, without Chrome's remote debugging prompt.",
+	"type": "module",
+	"bin": { "starteammate-remote-debugging": "relay.mjs" },
+	"files": ["relay.mjs", "extension"],
+	"engines": { "node": ">=20" },
+	"scripts": { "relay": "node relay.mjs", "test": "node test/e2e.mjs" },
+	"license": "MIT",
+	"repository": "github:brandonmlicea/starteammate-remote-debugging",
+	"keywords": ["chrome-extension", "cdp", "chrome-devtools-protocol", "remote-debugging", "chrome.debugger", "starteammate", "browser-automation"]
+}
