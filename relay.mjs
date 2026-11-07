@@ -106,7 +106,8 @@ export function relay({ token = randomBytes(16).toString("hex"), log = () => {} 
 		const url = new URL(req.url ?? "/", "http://127.0.0.1");
 		const allowed = req.headers["x-star-driver"] === token || url.searchParams.get("t") === token;
 		if (url.pathname === "/status" && allowed && !req.headers.origin) {
-			res.writeHead(200, { "content-type": "application/json" }).end(JSON.stringify(status()));
+			const body = JSON.stringify(status());
+			res.writeHead(200, { "content-length": Buffer.byteLength(body), "content-type": "application/json" }).end(body);
 			return;
 		}
 		res.writeHead(allowed ? 404 : 403).end();
